@@ -1,0 +1,35 @@
+/* 1. Tekst svih linkova koji upućuju na Google obojiti u zeleno */
+a[href*="google.com"] {
+  color: green;
+}
+
+/* 2. Tekst linka koji upućuje na LINK group web sajt obojiti u crvenu */
+a[href*="linkgroup.com"] {
+  color: red;
+}
+
+/* 3. Paragrafe unutar second-div elementa naizmenično obojiti u crvenu i plavu boju */
+#second-div p:nth-child(odd) {
+  color: red;
+}
+
+#second-div p:nth-child(even) {
+  color: blue;
+}
+
+/* 4. Dodati tekst "NEW" u žutoj boji na kraju Paragrafa 2 i 3 */
+#second-div p:nth-child(2)::after {
+  content: " NEW";
+  color: yellow;
+}
+
+#second-div p:nth-child(3)::after {
+  content: " NEW";
+  color: yellow;
+}
+
+/* 5. Prelaskom miša preko Paragraph 10 elementa, tekst treba da postane italic */
+#second-div p:nth-child(10):hover {
+  font-style: italic;
+  background-color: yellow; /* Dodaj pozadinsku boju da vidiš da li hover radi */
+}
